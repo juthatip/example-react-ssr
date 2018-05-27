@@ -1,11 +1,10 @@
 import { FETCH_USERS } from '../actions';
 
 export default (state = [], action) => {
-    console.log(action.payload)
-    switch (action.type) {
-        case FETCH_USERS:
-            return action.payload.data;
-        default:
-            return state;
-    }
-}
+  switch (action.type) {
+    case FETCH_USERS:
+      return action.payload.data;
+    default:
+      return state;
+  }
+};
